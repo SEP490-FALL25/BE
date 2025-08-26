@@ -22,35 +22,15 @@ export class SharedRoleRepository {
     return role
   }
 
-  async getChefRoleId() {
-    if (this.clientRoleId) {
-      return this.clientRoleId
-    }
-    const role = await this.getRole(RoleName.Chef)
+  // async getManagerRoleId() {
+  //   if (this.clientRoleId) {
+  //     return this.clientRoleId
+  //   }
+  //   const role = await this.getRole(RoleName.Manager)
 
-    this.clientRoleId = role.id
-    return role.id
-  }
-
-  async getStaffRoleId() {
-    if (this.clientRoleId) {
-      return this.clientRoleId
-    }
-    const role = await this.getRole(RoleName.Staff)
-
-    this.clientRoleId = role.id
-    return role.id
-  }
-
-  async getManagerRoleId() {
-    if (this.clientRoleId) {
-      return this.clientRoleId
-    }
-    const role = await this.getRole(RoleName.Manager)
-
-    this.clientRoleId = role.id
-    return role.id
-  }
+  //   this.clientRoleId = role.id
+  //   return role.id
+  // }
 
   async getAdminRoleId() {
     if (this.adminRoleId) {
